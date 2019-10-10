@@ -35,12 +35,6 @@ public class Board {
         }
         return printBoard.toString();
     }
-
-    public static void main (String[] args) throws FileNotFoundException {
-        Board board = new Board();
-        board.readBoard("src/main/resources/sudoku.sdkx");
-        System.out.println(board.toString());
-    }
 }
 
 
