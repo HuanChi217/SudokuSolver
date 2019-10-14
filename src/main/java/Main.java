@@ -2,8 +2,7 @@ import java.io.FileNotFoundException;
 
 public class Main {
     public static void main (String[] args) throws FileNotFoundException {
-        Board board = new Board();
-        board.readBoard("src/main/resources/sudoku.sdkx");
-        System.out.println(board.toString());
+        Board SDKBoard = new Board("src/main/resources/sudoku.sdk");
+        System.out.println(SDKBoard.toString());
     }
 }

@@ -1,28 +1,12 @@
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.Scanner;
 
 public class Board {
 
     private char[][] element;
-    Board () {
-        element = new char[9][9];
-    }
 
-    public char[][] readBoard(String filepath) throws FileNotFoundException {
-        Scanner scan = new Scanner(new File(filepath));
-        for (int i = 0; i < 9; i++) {
-            String line = scan.nextLine();
-            for (int j = 0; j < 9; j++) {
-                char token = line.charAt(j);
-                if (token == 'x') {
-                    element[i][j] = '.';
-                } else {
-                    element[i][j] = token;
-                }
-            }
-        }
-        return element;
+    public Board (String filePath) throws FileNotFoundException {
+        BoardReader input = BoardReaderFactory.boardType(filePath);
+        element = input.boardBuilder(filePath);
     }
 
     public String toString() {
