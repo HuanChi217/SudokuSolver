@@ -1,7 +1,6 @@
 import java.io.FileNotFoundException;
 
 public class Board {
-
     private char[][] element;
 
     public Board (String filePath) throws FileNotFoundException {

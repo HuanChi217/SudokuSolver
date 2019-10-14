@@ -9,5 +9,4 @@ public class BoardReaderFactory {
             return null;
         }
     }
-
 }
